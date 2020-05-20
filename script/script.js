@@ -31,11 +31,11 @@ enterJob.addEventListener('click', add);
 addEventListener('keydown', function(event) {
 	switch (event.keyCode) {
 		case 13:
-			console.log('hi');
+			// console.log('hi');
 			add();
 			break;
 		case 46:
-			console.log('bye');
+			// console.log('bye');
 			removeValue();
 			break;
 	}
