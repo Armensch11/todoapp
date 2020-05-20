@@ -25,7 +25,7 @@
 }
 #enter{
 	
-	background-image: url(/icons/enter-icon.png);
+	background-image: url(https://armensch11.github.io/todoapp/icons/enter-icon.png);
 	height:50px;
 	width: 50px;
 	background-repeat: no-repeat;
@@ -33,7 +33,7 @@
 
 }
 #remove{
-	background-image: url(/icons/clear-icon.png);
+	background-image: url(https://armensch11.github.io/todoapp/icons/clear-icon.png);
 	height:50px;
 	width: 50px;
 	background-repeat: no-repeat;
@@ -86,7 +86,7 @@ padding: 5px;
 	
 	width:50px;
 	height: 50px;
-	background-image: url(/icons/done-icon.png);
+	background-image: url(https://armensch11.github.io/todoapp/icons/done-icon.png);
 	background-repeat: no-repeat;
 	background-size: cover ;
 	margin: 1px;
@@ -97,7 +97,7 @@ padding: 5px;
 
 	width:50px;
 	height: 50px;
-	background-image: url(/icons/delete-icon.png);
+	background-image: url(https://armensch11.github.io/todoapp/icons/delete-icon.png);
 	background-repeat: no-repeat;
 	background-size: cover ;
 	margin: 1px;
