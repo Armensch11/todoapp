@@ -76,15 +76,15 @@ function add() {
 		document.getElementById('input-field').focus();
 	}
 }
-// function actionToRemove(current){
-// 	let parent=current.closest('div.todo-item');
-// 	let content=parent.firstChild.innerHTML
-// 	return content;
+// // function actionToRemove(current){
+// // 	let parent=current.closest('div.todo-item');
+// // 	let content=parent.firstChild.innerHTML
+// // 	return content;
 
-// }
+// // }
 function actionToRemove(current,classname){
 	let prevSib=current.previousElementSibling;
-	console.log(prevSib);
+	// console.log(prevSib);
 	while (prevSib){
 		if(prevSib.className===classname){
 			return prevSib.innerHTML;
@@ -103,6 +103,7 @@ function deleteParent(event) {
 	// }
 	let child = event.target;
 	let jobToDel= actionToRemove(child,'action-info');
+	// let jobToDel=child.closest('action-info').innerHTML;
 	// console.log(jobToDel);
 	entrySet.delete(jobToDel);
 	// console.log(event.target);
@@ -116,7 +117,7 @@ function deleteParent(event) {
 function showDone() {
 	let child = event.target;
 	let paintDiv=child.closest('div.todo-item');
-	paintDiv.style.backgroundColor='green';
+	paintDiv.style.backgroundColor='#f51f1f70';
 
 }
 function removeValue() {
