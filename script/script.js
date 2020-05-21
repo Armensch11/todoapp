@@ -60,7 +60,7 @@ function add() {
 
 		statusDiv = document.createElement('div');
 		statusDiv.classList.add('action-done');
-		// statusDiv.innerHTML = 'done';
+		
 		statusDiv.addEventListener('click',showDone);
 
 		delDiv = document.createElement('div');
@@ -69,13 +69,23 @@ function add() {
 		delDiv.addEventListener('click', deleteParent);
 		// delDiv.appendChild(document.createTextNode('del'));
 		todoItem.prepend(infoDiv, statusDiv, delDiv);
-		infoDiv.innerHTML = '';
+		
 		infoDiv.innerHTML = jobInfo;
 		removeValue();
 		inputArea.setAttribute('placeholder', 'to do info');
 	}
 }
-
+function prevSibling(curent, selector){
+	let prevSib=curent.previousElementSibling;
+	console.log(prevSib);
+	while(prevSib){
+		if(prevSib.matches(selector)){
+			return prevSib.innerHTML;
+		}
+		prevSib=prevSib.previousElementSibling;
+	}
+	console.log(prevSib);
+}
 function deleteParent(event) {
 	// const deleteJob = document.getElementsByClassName('remove');
 	// if (deleteJob.length) {
@@ -84,6 +94,8 @@ function deleteParent(event) {
 	// 	});
 	// }
 	let child = event.target;
+	let jobToDel= prevSibling(child,'action-info');
+	console.log(jobToDel);
 	// console.log(event.target);
 	let delDiv = child.closest('div.todo-item');
 
