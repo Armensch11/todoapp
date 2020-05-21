@@ -73,18 +73,14 @@ function add() {
 		infoDiv.innerHTML = jobInfo;
 		removeValue();
 		inputArea.setAttribute('placeholder', 'to do info');
+		
 	}
 }
-function prevSibling(curent, selector){
-	let prevSib=curent.previousElementSibling;
-	console.log(prevSib);
-	while(prevSib){
-		if(prevSib.matches(selector)){
-			return prevSib.innerHTML;
-		}
-		prevSib=prevSib.previousElementSibling;
-	}
-	console.log(prevSib);
+function actionToRemove(curent){
+	let parent=curent.closest('div.todo-item');
+	let content=parent.firstChild.innerHTML
+	return content;
+
 }
 function deleteParent(event) {
 	// const deleteJob = document.getElementsByClassName('remove');
@@ -94,8 +90,9 @@ function deleteParent(event) {
 	// 	});
 	// }
 	let child = event.target;
-	let jobToDel= prevSibling(child,'action-info');
-	console.log(jobToDel);
+	let jobToDel= actionToRemove(child);
+	// console.log(jobToDel);
+	entrySet.delete(jobToDel);
 	// console.log(event.target);
 	let delDiv = child.closest('div.todo-item');
 
