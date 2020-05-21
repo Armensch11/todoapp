@@ -1,29 +1,10 @@
 let enterJob = document.getElementById('enter');
 let removeJob = document.getElementById('remove');
-
 let inputArea = document.getElementsByTagName('input')[0];
 // inputArea.addEventListener('click', () => {
 // 	inputArea.setAttribute('placeholder', '');
 // });
-function removeValue() {
-	inputArea.value = '';
-}
-function getValue() {
-	return inputArea.value;
-}
 
-
-function outsideClick(event) {
-	if (event.target !== inputArea) {
-		inputArea.setAttribute('placeholder', 'to do info');
-	} else {
-		inputArea.setAttribute('placeholder', '');
-	}
-	if (event.target === removeJob) {
-		inputArea.setAttribute('placeholder', '');
-		removeValue();
-	}
-}
 addEventListener('click', outsideClick);
 
 enterJob.addEventListener('click', add);
@@ -40,9 +21,9 @@ addEventListener('keydown', function(event) {
 			break;
 	}
 });
+
+
 let counter = 0;
-
-
 function add() {
 	let jobInfo = getValue();
 	let todoContainer = document.getElementById('todo-container');
@@ -106,4 +87,23 @@ function showDone() {
 	let paintDiv=child.closest('div.todo-item');
 	paintDiv.style.backgroundColor='green';
 
+}
+function removeValue() {
+	inputArea.value = '';
+}
+function getValue() {
+	return inputArea.value;
+}
+
+
+function outsideClick(event) {
+	if (event.target !== inputArea) {
+		inputArea.setAttribute('placeholder', 'to do info');
+	} else {
+		inputArea.setAttribute('placeholder', '');
+	}
+	if (event.target === removeJob) {
+		inputArea.setAttribute('placeholder', '');
+		removeValue();
+	}
 }
