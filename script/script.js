@@ -40,7 +40,7 @@ function add() {
 		entrySet.add(jobInfo.split(' ').join(''));
 		if (entrySet.size===setSize){
 			alert('you have such entry');
-			return;
+			return document.getElementById('input-field').focus();;
 		}
 		
 
@@ -73,7 +73,7 @@ function add() {
 		infoDiv.innerHTML = jobInfo;
 		removeValue();
 		inputArea.setAttribute('placeholder', 'to do info');
-		
+		document.getElementById('input-field').focus();
 	}
 }
 function actionToRemove(curent){
