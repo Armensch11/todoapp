@@ -104,6 +104,6 @@ function deleteParent(event) {
 function showDone() {
 	let child = event.target;
 	let paintDiv=child.closest('div.todo-item');
-	paintDiv.style.backgroundColor='grey';
+	paintDiv.style.backgroundColor='green';
 
 }
