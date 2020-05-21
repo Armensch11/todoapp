@@ -24,6 +24,7 @@ addEventListener('keydown', function(event) {
 
 
 let counter = 0;
+let entrySet=new Set();
 function add() {
 	let jobInfo = getValue();
 	let todoContainer = document.getElementById('todo-container');
@@ -34,6 +35,15 @@ function add() {
 	let hLine;
 
 	if (jobInfo) {
+		let setSize=entrySet.size;
+	
+		entrySet.add(jobInfo.split(' ').join(''));
+		if (entrySet.size===setSize){
+			alert('you have such entry');
+			return;
+		}
+		
+
 		hLine = document.createElement('hr');
 		hLine.classList.add('hr');
 
