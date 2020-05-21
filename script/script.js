@@ -76,10 +76,22 @@ function add() {
 		document.getElementById('input-field').focus();
 	}
 }
-function actionToRemove(curent){
-	let parent=curent.closest('div.todo-item');
-	let content=parent.firstChild.innerHTML
-	return content;
+// function actionToRemove(current){
+// 	let parent=current.closest('div.todo-item');
+// 	let content=parent.firstChild.innerHTML
+// 	return content;
+
+// }
+function actionToRemove(current,classname){
+	let prevSib=current.previousElementSibling;
+	console.log(prevSib);
+	while (prevSib){
+		if(prevSib.className===classname){
+			return prevSib.innerHTML;
+		}
+		prevSib=prevSib.previousElementSibling;
+	}
+	
 
 }
 function deleteParent(event) {
@@ -90,7 +102,7 @@ function deleteParent(event) {
 	// 	});
 	// }
 	let child = event.target;
-	let jobToDel= actionToRemove(child);
+	let jobToDel= actionToRemove(child,'action-info');
 	// console.log(jobToDel);
 	entrySet.delete(jobToDel);
 	// console.log(event.target);
