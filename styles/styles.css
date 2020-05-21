@@ -80,7 +80,7 @@ hr {
 	color: rgb(22, 22, 21);
 	text-align: justify;
 	padding: 5px;
-	margin: 1px;
+	margin: 4px;
 	box-sizing: border-box;
 	background-color:rgba(211, 208, 208, 0.664);
 }
@@ -88,23 +88,24 @@ hr {
 .action-done {
 	text-align: center;
 	align-self: center;
-	width:50px;
-	height: 50px;
+	width: 40px;
+	height: 40px;
 	background-image: url(https://armensch11.github.io/todoapp/icons/done-icon.png);
 	background-repeat: no-repeat;
 	background-size: cover ;
-	margin: 2px;
-	font-family: 'Courier New', Courier, monospace;
+	margin: 4px;
+	
 }
 .remove {
 	text-align: center;
 	align-self: center;
-	width:50px;
-	height: 50px;
+	width: 40px;
+	height: 40px;
 	background-image: url(https://armensch11.github.io/todoapp/icons/delete-icon.png);
 	background-repeat: no-repeat;
 	background-size: cover ;
-	margin: 2px;
+	margin: 4px;
+	
 	font-family: 'Courier New', Courier, monospace;
 }
 .action-info:hover {
