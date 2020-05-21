@@ -1,6 +1,6 @@
 #app-container {
 	position: absolute;
-	min-width: 400px;
+	min-width: 470px;
 	max-width: 30%;
 	height: fit-content;
 
@@ -30,6 +30,8 @@
 	width: 50px;
 	background-repeat: no-repeat;
 	background-size: cover ;
+	margin: 2px;
+	
 
 }
 #remove{
@@ -38,12 +40,14 @@
 	width: 50px;
 	background-repeat: no-repeat;
 	background-size: cover ;
+	margin: 2px;
 }
 input {
 	width: 80%;
 	background-color: rgb(255, 255, 255);
 	font-family: 'Courier New', Courier, monospace;
 	border: none;
+	margin: 4px;
 }
 /* button {
 	margin: 1px;
@@ -67,40 +71,40 @@ hr {
 	margin: 2px;
 }
 .action-info {
-	width: 330px;
+	width: 350px;
 	height: 50px;
 
-
+	align-self: center;
 	overflow-wrap: break-word;
 	font-family: 'Courier New', Courier, monospace;
-	color: rgb(250, 250, 73);
+	color: rgb(22, 22, 21);
 	text-align: justify;
-padding: 5px;
+	padding: 5px;
 	margin: 1px;
 	box-sizing: border-box;
-	background-color:grey;
+	background-color:rgba(211, 208, 208, 0.664);
 }
 
 .action-done {
 	text-align: center;
-	
+	align-self: center;
 	width:50px;
 	height: 50px;
 	background-image: url(https://armensch11.github.io/todoapp/icons/done-icon.png);
 	background-repeat: no-repeat;
 	background-size: cover ;
-	margin: 1px;
+	margin: 2px;
 	font-family: 'Courier New', Courier, monospace;
 }
 .remove {
 	text-align: center;
-
+	align-self: center;
 	width:50px;
 	height: 50px;
 	background-image: url(https://armensch11.github.io/todoapp/icons/delete-icon.png);
 	background-repeat: no-repeat;
 	background-size: cover ;
-	margin: 1px;
+	margin: 2px;
 	font-family: 'Courier New', Courier, monospace;
 }
 .action-info:hover {
@@ -124,9 +128,18 @@ padding: 5px;
 	box-shadow: 2px 1px 2px 1px;
 	transition: 0.3s;
 }
+button{
+	color: white;
+	background-color: white;
+	border: none;
+}
+input:hover{
+	border: 1px solid rgb(219, 219, 219);
+}
 button:hover {
 	background-color: rgba(255, 255, 255, 0.796);
 	font-size: 19px;
-	box-shadow: 2px 1px 2px 1px;
+	border: 1px solid rgb(219, 219, 219);
+
 	transition: 0.2s;
 }
